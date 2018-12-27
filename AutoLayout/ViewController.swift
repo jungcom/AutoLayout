@@ -35,12 +35,57 @@ class ViewController: UIViewController {
         return topContainerView
     }()
     
+    let previousButton : UIButton = {
+        let previousButton = UIButton(type: .system)
+        previousButton.setTitle("Back", for: .normal)
+        previousButton.translatesAutoresizingMaskIntoConstraints = false
+        previousButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        previousButton.setTitleColor(.black, for: .normal)
+        return previousButton
+    }()
+    
+    let nextButton : UIButton = {
+        let nextButton = UIButton(type: .system)
+        nextButton.setTitle("Next", for: .normal)
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        return nextButton
+    }()
+    
+    let pageControl : UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = 4
+        pageControl.currentPageIndicatorTintColor = .blue
+        pageControl.pageIndicatorTintColor = .cyan
+        return pageControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         view.addSubview(descriptionTextView)
         view.addSubview(topContainerView)
+        setupBottomControls()
         setupLayout()
+    }
+    
+    fileprivate func setupBottomControls(){
+        
+        
+        //StackView
+        let bottomStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
+        bottomStackView.backgroundColor = .red
+        bottomStackView.translatesAutoresizingMaskIntoConstraints = false
+        bottomStackView.distribution = .fillEqually
+        view.addSubview(bottomStackView)
+        
+        NSLayoutConstraint.activate([
+            bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            bottomStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            bottomStackView.heightAnchor.constraint(equalToConstant: 50)
+            ])
     }
 
     func setupLayout() {
