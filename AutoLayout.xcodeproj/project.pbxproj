@@ -12,6 +12,8 @@
 		4E9BB7B821D19E9C00E06B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BB7B621D19E9C00E06B2D /* Main.storyboard */; };
 		4E9BB7BA21D19E9D00E06B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BB7B921D19E9D00E06B2D /* Assets.xcassets */; };
 		4E9BB7BD21D19E9D00E06B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BB7BB21D19E9D00E06B2D /* LaunchScreen.storyboard */; };
+		4E9BB7C521D6DD8800E06B2D /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB7C421D6DD8800E06B2D /* SwipingController.swift */; };
+		4E9BB7C721D6E29900E06B2D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB7C621D6E29900E06B2D /* PageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4E9BB7B921D19E9D00E06B2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9BB7BC21D19E9D00E06B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E9BB7BE21D19E9D00E06B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E9BB7C421D6DD8800E06B2D /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		4E9BB7C621D6E29900E06B2D /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				4E9BB7B921D19E9D00E06B2D /* Assets.xcassets */,
 				4E9BB7BB21D19E9D00E06B2D /* LaunchScreen.storyboard */,
 				4E9BB7BE21D19E9D00E06B2D /* Info.plist */,
+				4E9BB7C421D6DD8800E06B2D /* SwipingController.swift */,
+				4E9BB7C621D6E29900E06B2D /* PageCell.swift */,
 			);
 			path = AutoLayout;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			files = (
 				4E9BB7B521D19E9C00E06B2D /* ViewController.swift in Sources */,
 				4E9BB7B321D19E9C00E06B2D /* AppDelegate.swift in Sources */,
+				4E9BB7C721D6E29900E06B2D /* PageCell.swift in Sources */,
+				4E9BB7C521D6DD8800E06B2D /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
