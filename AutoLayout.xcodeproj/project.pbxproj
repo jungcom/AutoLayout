@@ -14,6 +14,7 @@
 		4E9BB7BD21D19E9D00E06B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BB7BB21D19E9D00E06B2D /* LaunchScreen.storyboard */; };
 		4E9BB7C521D6DD8800E06B2D /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB7C421D6DD8800E06B2D /* SwipingController.swift */; };
 		4E9BB7C721D6E29900E06B2D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB7C621D6E29900E06B2D /* PageCell.swift */; };
+		4E9BB7CA21D6FE2700E06B2D /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BB7C921D6FE2700E06B2D /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4E9BB7BE21D19E9D00E06B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9BB7C421D6DD8800E06B2D /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		4E9BB7C621D6E29900E06B2D /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		4E9BB7C921D6FE2700E06B2D /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		4E9BB7B121D19E9C00E06B2D /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				4E9BB7C821D6FE0C00E06B2D /* Model */,
 				4E9BB7B221D19E9C00E06B2D /* AppDelegate.swift */,
 				4E9BB7B421D19E9C00E06B2D /* ViewController.swift */,
 				4E9BB7B621D19E9C00E06B2D /* Main.storyboard */,
@@ -68,6 +71,14 @@
 				4E9BB7C621D6E29900E06B2D /* PageCell.swift */,
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		4E9BB7C821D6FE0C00E06B2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E9BB7C921D6FE2700E06B2D /* Page.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 				4E9BB7B321D19E9C00E06B2D /* AppDelegate.swift in Sources */,
 				4E9BB7C721D6E29900E06B2D /* PageCell.swift in Sources */,
 				4E9BB7C521D6DD8800E06B2D /* SwipingController.swift in Sources */,
+				4E9BB7CA21D6FE2700E06B2D /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
