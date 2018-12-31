@@ -46,36 +46,9 @@ class PageCell : UICollectionViewCell{
         return topContainerView
     }()
     
-    private let previousButton : UIButton = {
-        let previousButton = UIButton(type: .system)
-        previousButton.setTitle("Back", for: .normal)
-        previousButton.translatesAutoresizingMaskIntoConstraints = false
-        previousButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        previousButton.setTitleColor(.black, for: .normal)
-        return previousButton
-    }()
-    
-    private let nextButton : UIButton = {
-        let nextButton = UIButton(type: .system)
-        nextButton.setTitle("Next", for: .normal)
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        return nextButton
-    }()
-    
-    private let pageControl : UIPageControl = {
-        let pageControl = UIPageControl()
-        pageControl.currentPage = 0
-        pageControl.numberOfPages = 4
-        pageControl.currentPageIndicatorTintColor = .blue
-        pageControl.pageIndicatorTintColor = .cyan
-        return pageControl
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
-        setupBottomControls()
     }
     
     func setupLayout() {
@@ -106,24 +79,6 @@ class PageCell : UICollectionViewCell{
         descriptionTextView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
         descriptionTextView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
         descriptionTextView.bottomAnchor.constraint(equalTo: bottomAnchor, constant : 30).isActive = true
-    }
-    
-    fileprivate func setupBottomControls(){
-        
-        
-        //StackView
-        let bottomStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
-        bottomStackView.backgroundColor = .red
-        bottomStackView.translatesAutoresizingMaskIntoConstraints = false
-        bottomStackView.distribution = .fillEqually
-        addSubview(bottomStackView)
-        
-        NSLayoutConstraint.activate([
-            bottomStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            bottomStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            bottomStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            bottomStackView.heightAnchor.constraint(equalToConstant: 50)
-            ])
     }
     
     required init?(coder aDecoder: NSCoder) {
