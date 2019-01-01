@@ -10,11 +10,15 @@ import UIKit
 
 class SwipingController : UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
-//    let images = ["1","2","3","4"]
-//    let headerStrings = ["Hello, This is Anthony's Project that uses page swiping",
-//                         "Here I added all the UI elements and constraints programmatically",
-//                         "There was absolutely no use of the storyboard",
-//                         "This allows for more flexibility in building an application"]
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionViewLayout.invalidateLayout()
+        coordinator.animate(alongsideTransition: { (_) in
+            self.collectionViewLayout.invalidateLayout()
+            let indexPath = IndexPath(item: self.pageControl.currentPage, section: 0)
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }, completion: nil)
+    }
+    
     let pages = [
         Page(imageName: "1", headerText:"Hello, This is Anthony's Project that uses page swiping with the MVC pattern", bodyText: "Press next to move to the next page"),
         Page(imageName: "2", headerText:"Here I added all the UI elements and constraints programmatically", bodyText: "You can swipe left or right to scroll back and forth"),
